@@ -22,12 +22,9 @@
 
 (defconst tablegen-packages
   '(
-    ansi-color
     (tablegen-mode :location (recipe :fetcher local))
     ))
 
 (defun tablegen/init-tablegen-mode ()
-  (use-package 'tablegen-mode
-    (add-to-list 'auto-mode-alist (cons (purecopy "\\.td\\'")  'tablegen-mode))
-    )
+  (add-to-list 'auto-mode-alist (cons (purecopy "\\.td\\'")  'tablegen-mode))
   )
